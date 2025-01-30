@@ -1,25 +1,6 @@
 <x-layout>
     <x-slot:title>{{ $title }}</x-slot:title>
 
-    {{-- <article class="py-8 max-w-screen-md ">
-        <strong class="mb-1 text-3xl track font-bold text-gray-900">{{ $post['title'] }}</strong>
-        </a>
-        <img src="/img/Notice.jpg" alt="notice" width="450">
-        <div>
-            By
-            <a href="/authors/{{ $post->author->username }}"class="hover:underline text-base text-gray-500">
-                {{ $post->author->name }}</a>
-            in
-            <a
-                href="/categories/{{ $post->category->slug }}"class="hover:underline text-base text-gray-500">{{ $post->category->name }}</a>|
-            {{ $post->created_at->diffForHumans() }}
-        </div class="text-base text-gray-500 ">
-        <p class="my-4 font-light">
-            {{ $post['body'] }}
-        </p>
-        <a href="/posts/" class="font-medium text-blue-500 hover:underline">&laquo; Back to posts </a>
-
-    </article> --}}
     <main class="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900 antialiased">
         <div class="flex justify-between px-4 mx-auto max-w-screen-xl ">
             <article
@@ -31,12 +12,12 @@
                             <img class="mr-4 w-16 h-16 rounded-full" src="/img/rhodes.jpg"
                                 alt="{{ $post->author->name }}">
                             <div>
-                                <a href="/author/{{ $post->author->username }}" rel="author"
+                                <a href="/posts?author/={{ $post->author->username }}" rel="author"
                                     class="text-xl font-bold text-gray-900 dark:text-white">{{ $post->author->name }}</a>
                                 <p class="text-base text-gray-500 dark:text-gray-400">Rhodes Island Operator</p>
                                 <p class="text-base text-gray-500 dark:text-gray-400">
                                     {{ $post->created_at->diffForHumans() }}</p>
-                                    <a href="/categories/{{ $post->category->slug }}">
+                                    <a href="/posts?category/{{ $post->category->slug }}">
                                         <span
                                             class="bg-primary-100 
                                         text-primary-800 text-xs font-medium inline-flex 
