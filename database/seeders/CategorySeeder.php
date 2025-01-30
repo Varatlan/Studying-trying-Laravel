@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Category;
+use Faker\Core\Color;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -17,19 +18,19 @@ class CategorySeeder extends Seeder
         
         Category::create([
             'name' => 'Rhodes Island Archive',
-            'slug' => 'rhodes-island-archive'
+            'slug' => 'rhodes-island-archive',
         ]);
         Category::create([
             'name' => 'Blue Archive',
-            'slug' => 'blue-archive'
+            'slug' => 'blue-archive',
         ]);
         Category::create([
             'name' => 'Guardian Tales',
-            'slug' => 'guardian-tales'
+            'slug' => 'guardian-tales',
         ]);
         Category::create([
             'name' => 'Limbus Company',
-            'slug' => 'limbus-company'
+            'slug' => 'limbus-company',
         ]);
     }
 }
