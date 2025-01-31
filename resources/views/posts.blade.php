@@ -51,7 +51,7 @@
                     class="p-6 bg-white rounded-lg border border-gray-200 shadow-md 
                     dark:bg-gray-800 dark:border-gray-700">
                     <div class="flex justify-between items-center mb-5 text-gray-500">
-                        <a href="/posts?category/{{ $post->category->slug }}">
+                        <a href="/posts?category={{ $post->category->slug }}">
                             <span
                                 class="bg-primary-100 
                             text-primary-800 text-xs font-medium inline-flex 
@@ -71,7 +71,7 @@
                     <p class="mb-5 font-light text-gray-500 dark:text-gray-400">
                         {{ Str::limit($post->body, 100) }}</p>
                     <div class="flex justify-between items-center">
-                        <a href="/posts?author/={{ $post->author->username }}">
+                        <a href="/posts?author={{ $post->author->username }}">
                             <div class="flex items-center space-x-4">
                                 <img class="w-7 h-7 rounded-full" src="/img/rhodes.jpg"
                                     alt={{ $post->author->name }} />
